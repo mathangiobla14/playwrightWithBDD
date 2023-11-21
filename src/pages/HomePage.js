@@ -1,7 +1,4 @@
-const { expect } = require('@playwright/test');
 class HomePage{
-
-    
     
     constructor(page, firstBranchName){
         this.firstBranchName;
@@ -20,18 +17,18 @@ class HomePage{
     }
 
     async navigateToLloyodsHomePage(){
-        await this.page.goto('https://www.lloydsbank.com/');
+        await this.goto('https://www.lloydsbank.com/');
     }
 
 
     async verifyTitle(title){
-        await expect(this.page).toHaveTitle(title);
+        await expect(page).toHaveTitle('Lloyds Bank - Personal Banking, Personal Finances & Bank Accounts');
 
     }
 
     async conductSearchBranch(searchBranch){
-        await this.page.branchSearch.fill(searchBranch);
-        await this.page.branchSearch.press('Enter');
+        await this.branchSearch.fill(searchBranch);
+        await this.branchSearch.press('Enter');
     }
 
     async verifyTitleOfLocationPage(locationTitle){
