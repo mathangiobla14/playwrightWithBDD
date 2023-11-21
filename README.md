@@ -11,5 +11,11 @@ A cucumber json file is created to add the feature file and step definition glue
 
 folder structure created in the form of BDD 
 
+How and what to install: 
+1. Node
+2. npm
+3. playwright package - can be done either using npm init playwright@latest or by typing playwright install on the command pallette
+
+   
 How to run the file: Use npm test or npm run test
 You can also use npm cucumber-js as all the javascript libraries related to cucumber are stored in the cucumber-js file in Node modules.
